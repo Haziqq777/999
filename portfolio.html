@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        span {
+          color: #01cb9c;
+        }
+      }
+      nav {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.753);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 9vh;
+        h2 {
+          font-size: 17px;
+          font-weight: bolder;
+          padding-left: 50px;
+          transition: 1s ease;
+        }
+      }
+      nav h2:hover {
+        color: #30c9a6;
+        transform: translateY(-3px);
+      }
+      ul li {
+        list-style: none;
+        gap: 5px;
+      }
+      ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 13px;
+        display: flex;
+        justify-content: space-evenly;
+        font-weight: bold;
+        transition: 0.7s ease;
+      }
+      .nav {
+        display: flex;
+        gap: 25px;
+        padding-right: 10%;
+      }
+      ul li a:hover {
+        color: #30c9a6;
+        transform: translateY(-3px);
+      }
+      .home {
+        background-color: black;
+        height: 91vh;
+        width: 100%;
+        color: white;
+      }
+
+      .about {
+        padding-top: 10%;
+        padding-left: 10%;
+        span {
+          color: #30c9a6;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      .about h1 {
+        letter-spacing: 5px;
+      }
+      .social a {
+        color: #30c9a6;
+        border: 1px solid #30c9a6;
+        border-radius: 50%;
+        font-size: 10px;
+        align-items: center;
+        text-align: center;
+        padding: 4px 6px;
+        position: relative;
+        left: 10%;
+      }
+      .social a:hover {
+        box-shadow: rgba(5, 226, 152, 0.906) 0px 7px 20px 0px,
+          rgba(2, 209, 232, 0.856) 0px 0px 0px 1px;
+        transform: translateY(10px);
+      }
+      .my {
+        height: 10vh;
+        width: 20%;
+        position: absolute;
+        right: 15%;
+        top: 20%;
+      }
+      .my img {
+        width: 120%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .btn {
+        padding: 4px 10px;
+        margin-left: 10%;
+        border: black 1px solid;
+        font-size: 8px;
+        color: black;
+        background-color: #30c9a6;
+        border-radius: 30px;
+        font-weight: bolder;
+      }
+      .btn:hover {
+        box-shadow: rgba(5, 226, 152, 0.906) 0px 7px 20px 0px,
+          rgba(2, 209, 232, 0.856) 0px 0px 0px 1px;
+      }
+      .second {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        background-color: black;
+        margin-top: 1px;
+      }
+      .secimg {
+        height: 80vh;
+        width: 110%;
+        object-fit: cover;
+      }
+      .secimg img {
+        object-fit: cover;
+        height: 80vh;
+        width: 150%;
+        border-radius: 10%;
+        border: 2px solid #30c9a6;
+        margin-top: 5%;
+        margin-left: 30%;
+      }
+      .con {
+        margin-top: 8px;
+        h2 {
+          margin-left: 30%;
+          font-weight: 900;
+          letter-spacing: 5px;
+        }
+        color: white;
+        span {
+          color: #30c9a6;
+        }
+        p {
+          text-align: justify;
+          font-size: 12px;
+          padding-left: 20%;
+          padding-right: 10%;
+          letter-spacing: 2px;
+          margin-left: 10%;
+          line-height: 20px;
+        }
+      }
+      .con button {
+        position: absolute;
+        left: 34%;
+      }
+      .three {
+        background-color: black;
+        color: white;
+        height: 86vh;
+        width: 100%;
+        margin-top: 1px;
+        position: relative;
+      }
+      .cont {
+        h1 {
+          position: absolute;
+          left: 40%;
+          top: 12%;
+          letter-spacing: 2px;
+          font-weight: bolder;
+          font-size: 2em;
+        }
+        h4 {
+          font-weight: bolder;
+          text-decoration: underline;
+          position: absolute;
+          top: 27%;
+          left: 22%;
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+      }
+      #skill {
+        height: 50vh;
+        width: 50%;
+        background: black;
+        color: white;
+        line-height: 16px;
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        h6 {
+          font-weight: lighter;
+          font-size: 9px;
+        }
+        p {
+          font-size: 8px;
+        }
+      }
+      #skill img {
+        height: 4vh;
+      }
+      #skill .display {
+        display: flex;
+        align-items: center;
+        gap: 80%;
+      }
+      .blue {
+        height: 1vh;
+        background-color: #30c9a6;
+        border-radius: 2px;
+        width: 88%;
+        margin-bottom: 6px;
+        animation: su 2s infinite;
+      }
+      @keyframes su {
+        from {
+          width: 0;
+        }
+        to {
+          width: 88;
+        }
+      }
+      .bluee {
+        height: 1vh;
+        background-color: #30c9a6;
+        border-radius: 2px;
+        width: 70%;
+        margin-bottom: 6px;
+        animation: sui 2s infinite;
+      }
+      @keyframes sui {
+        from {
+          width: 0;
+        }
+        to {
+          width: 70;
+        }
+      }
+
+      #skill .displayy {
+        display: flex;
+        align-items: center;
+        gap: 64%;
+      }
+      .blueee {
+        height: 1vh;
+        background-color: #30c9a6;
+        border-radius: 2px;
+        width: 79%;
+        margin-bottom: 6px;
+        animation: suii 2s infinite;
+      }
+      @keyframes suii {
+        from {
+          width: 0;
+        }
+        to {
+          width: 79;
+        }
+      }
+      #skill .displayyy {
+        display: flex;
+        align-items: center;
+        gap: 70%;
+      }
+      .blues {
+        height: 1vh;
+        background-color: #30c9a6;
+        border-radius: 2px;
+        width: 46%;
+        margin-bottom: 6px;
+        animation: suiii 2s infinite;
+      }
+      @keyframes suiii {
+        from {
+          width: 0;
+        }
+        to {
+          width: 46;
+        }
+      }
+      #skill .displays {
+        display: flex;
+        align-items: center;
+        gap: 40%;
+      }
+      /* #four {
+        height: 70vh;
+        width: 100%;
+        background-color: black;
+      }
+      #pro h2 {
+        color: white;
+        font-weight: bolder;
+        font-size: 15px;
+        text-decoration: underline;
+        padding-left: 20%;
+      }
+      .skil {
+        padding-left: 10%;
+      }
+      #one {
+        height: 20vh;
+        width: 10%;
+        border: 4px #30c9a6 solid;
+        border-left: black solid 4px;
+        border-radius: 50%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      #one p {
+        color: white;
+        font-size: 10px;
+      }
+      #name p {
+        color: white;
+        font-size: 10px;
+        margin-top: 5px;
+      }
+      .skill {
+        padding-left: 30%;
+      }
+      #two {
+        height: 20vh;
+        width: 13%;
+        border: 4px #30c9a6 solid;
+        border-left: black solid 4px;
+        border-top: black solid 4px;
+        border-radius: 50%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      #two p {
+        color: white;
+        font-size: 10px;
+      }
+      #names p {
+        color: white;
+        font-size: 10px;
+        margin-top: 5px;
+        margin-left: 13px;
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2>CoderHaziq</h2>
+        <ul class="nav">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="#skillssection">Skills</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="home">
+          <div class="about">
+            <p>Hello, It's Me</p>
+            <h1>Muhammad Haziq</h1>
+            <p>
+              I'm a student who is <br />
+              passionate in <span>web development</span>
+            </p>
+            <br />
+          </div>
+          <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <br />
+          <button class="btn">Download Resume</button>
+          <div class="my">
+            <img src="prsnl.jpg" alt="photo" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="second">
+          <div class="secimg">
+            <img src="prsnl.jpg" alt="image" />
+          </div>
+          <div class="con">
+            <h2>About <span>Me</span></h2>
+            <p>
+              I'm Smart working CEH student specialized in Electronics and
+              Communication Engineering. Along with my degree, I completed
+              Python, SQL, Java, Cybersecurity courses and various technologies.
+              I learnt has helped me develop project called "Drowsiness
+              Detection & Alerting System". It was during this project that I
+              discovered that I am a team player. I am currently seeking roles
+              where I can utilize my experience and skill.
+            </p>
+            <br />
+            <button class="btn">Download Resume</button>
+          </div>
+        </div>
+      </section>
+      <section id="skillssection">
+        <div class="three">
+          <div class="cont">
+            <h1>My <span>Skills</span></h1>
+            <h4>Technical Skills</h4>
+          </div>
+          <div id="skill">
+            <img src="html-fotor-bg-remover-2024032702258.png" alt="" />
+            <div class="display">
+              <h6>HTML</h6>
+              <p>90%</p>
+            </div>
+            <div class="blue"></div>
+            <img src="css-Photoroom.png-Photoroom.png" alt="" />
+            <div class="displayy">
+              <h6>CSS</h6>
+              <p>70%</p>
+            </div>
+            <div class="bluee"></div>
+            <img src="python-fotor-bg-remover-2024032913810.png" alt="" />
+            <div class="displayyy">
+              <h6>Python</h6>
+              <p>75%</p>
+            </div>
+            <div class="blueee"></div>
+            <img src="java-fotor-bg-remover-2024032914858.png" alt="" />
+            <div class="displays">
+              <h6>Java</h6>
+              <p>50%</p>
+            </div>
+            <div class="blues"></div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="four">
+         <div id="pro">
+            <h2>Professional Skills</h2><br>
+            <div class="skil">
+               <div id="one">
+                  <p>60%</p><br>
+               </div>
+               <div id="name">
+                  <p>Problem Solving</p>
+               </div>
+            </div>
+            <div class="skill">
+               <div id="two">
+                  <p>50%</p><br>
+               </div>
+               <div id="names">
+                  <p>Leet Code</p>
+               </div>
+            </div>
+
+
+
+         </div>
+
+      </section> -->
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header></header>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #bg-image {
+        background-image: url(pexels-jvdm-1457842.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+      }
+      #login-div {
+        margin: 10px;
+        border-radius: 10px;
+        border: 1px solid white;
+        color: whitesmoke;
+        position: absolute;
+        padding-top: 7px;
+        right: 30%;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        width: 40%;
+        height: 90vh;
+      }
+      .login-content {
+        line-height: 5px;
+        font-size: small;
+      }
+      #btnn {
+        border: 1px black solid;
+        font-size: x-small;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+        padding: 3px 6px;
+        font-weight: bolder;
+        position: absolute;
+        bottom: 20px;
+        right: 40%;
+      }
+      input {
+        background: transparent;
+        border-radius: 5px;
+        border: solid 1px black;
+        margin: 3px;
+        padding: 2px 6px;
+        color: white;
+      }
+      #label {
+        color: black;
+      }
+      #select {
+        border-radius: 5px;
+        color: black;
+        background: transparent;
+        border: solid 1px black;
+        margin: 3px;
+        padding: 2px 6px;
+        font-size: 10px;
+      }
+    </style>
+    <main>
+      <form>
+        <div id="bg-image">
+          <div id="login-div">
+            <h2>Contact Us</h2>
+            <br />
+            <div class="login-content">
+              <label for="fname">First Name:</label>
+              <input
+                type="text"
+                name="fname"
+                id=""
+                placeholder="Enter Your First Name"
+              /><br /><br />
+              <label for="lname">Last Name:</label>
+              <input
+                type="text"
+                name="lname"
+                id=""
+                placeholder="Enter Your Last Name"
+              /><br /><br />
+              <label for="Password">Password:</label>
+              <input
+                type="password"
+                name="pass"
+                id=""
+                placeholder="Enter Your Password"
+              /><br /><br />
+              <label for="email">Email Address:</label>
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter Your Email Address"
+              /><br /><br />
+              <label for="" id="label">Payment Method:</label>
+              <select name="" id="select">
+                <option value="">Select Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="">EasyPaisa</option>
+                <option value="">JazzCash</option></select
+              ><br />
+              <button id="btnn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
